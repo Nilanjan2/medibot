@@ -23,10 +23,7 @@ model = gen_ai.GenerativeModel('gemini-pro')
 
 # Function to translate roles between Gemini-Pro and Streamlit terminology
 def translate_role_for_streamlit(user_role):
-    if user_role == "model":
-        return "assistant"
-    else:
-        return user_role
+    return "assistant" if user_role == "model" else user_role
 
 
 # Initialize chat session in Streamlit if not already present
@@ -47,7 +44,7 @@ user_prompt = st.chat_input("Ask about diseases and symptoms related query ...")
 if user_prompt:
     # Add instruction to restrict responses to disease-specific topics
     disease_prompt = (
-        "You are a medical assistant. Only answer queries related to diseases, symptoms, treatments, and health conditions. "
+        "You are a medical assistant. Only answer queries related to diseases, symptoms, treatments,medications and health conditions. "
         "If the question is unrelated to diseases, respond with: 'I can only provide disease-related information.'.\n\n"
         f"User: {user_prompt}"
     )
