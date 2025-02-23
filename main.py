@@ -43,7 +43,7 @@ for message in st.session_state.chat_session.history:
         st.markdown(message.parts[0].text)
 
 # Input field for user's message
-user_prompt = st.chat_input("Ask about diseases and symptoms...")
+user_prompt = st.chat_input("Ask about diseases and symptoms related query ...")
 if user_prompt:
     # Add instruction to restrict responses to disease-specific topics
     disease_prompt = (
