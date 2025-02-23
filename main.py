@@ -44,7 +44,7 @@ user_prompt = st.chat_input("Ask about diseases and symptoms related query ...")
 if user_prompt:
     # Add instruction to restrict responses to disease-specific topics
     disease_prompt = (
-        "You are a medical assistant. Only answer queries related to diseases, symptoms, treatments,medications and health conditions. "
+        "You are a medical assistant. Only answer queries related to hello, thank you, diseases, symptoms, treatments,medications and health conditions. "
         "If the question is unrelated to diseases, respond with: 'I can only provide disease-related information.'.\n\n"
         f"User: {user_prompt}"
     )
